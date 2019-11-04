@@ -1,20 +1,32 @@
 {
   "name": "wait-for-a-ha",
-  "version": "1.0.0",
-  "description": "等一哈！！！",
-  "author": "jeanrry <2753607241@qq.com>",
-  "private": true,
+  "version": "0.0.1",
+  "description": "等一哈！！！别动手！！！",
+  "author": "jeanrry",
+  "private": false,
+  "keywords": [
+    "vue",
+    "svg",
+    "wait"
+  ],
+  "main": "dist/waitForAHa.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "dist": "webpack --config build/webpack.dist.config.js",
+    "pub": "npm publish"
   },
   "dependencies": {
     "vue": "^2.5.2"
   },
+  "files": [
+    "dist",
+    "src/plugin"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
