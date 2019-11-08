@@ -1,6 +1,6 @@
 {
   "name": "wait-for-a-ha",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "等一哈！！！别动手！！！",
   "author": "jeanrry",
   "private": false,
@@ -24,8 +24,7 @@
     "vue": "^2.5.2"
   },
   "files": [
-    "dist",
-    "src/plugin"
+    "dist"
   ],
   "devDependencies": {
     "autoprefixer": "^7.1.2",

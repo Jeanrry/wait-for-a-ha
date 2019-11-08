@@ -49,12 +49,7 @@
         stroke="transparent"
         fill="transparent"
       />
-      <circle
-        :r="ballARadius * 5"
-        :stroke="computedBallABorderColor"
-        :fill="ballAColor"
-        stroke-width="1"
-      >
+      <circle :r="ballARadius * 5" :stroke="computedBorderColorA" :fill="colorA" stroke-width="1">
         <animateMotion
           begin="0s"
           id="a98c8a727f369f694b26f0478f2e57108"
@@ -96,12 +91,7 @@
           <mpath xlink:href="#529271345b04f3e7b5c30c5b4070c9509" />
         </animateMotion>
       </circle>
-      <circle
-        :r="ballBRadius * 5"
-        :stroke="computedBallBBorderColor"
-        :fill="ballBColor"
-        stroke-width="1"
-      >
+      <circle :r="ballBRadius * 5" :stroke="computedBorderColorB" :fill="colorB" stroke-width="1">
         <animateMotion
           begin="0s; 5bc7d5e2eeb068c63550eb4910756b171.end + 1s"
           id="49ad99ac0d2c1aaaca8064ce384178c73"
@@ -133,12 +123,7 @@
           <mpath xlink:href="#c57afbcba58c9895a5651898e50dbf423" />
         </animateMotion>
       </circle>
-      <circle
-        :r="ballCRadius * 5"
-        :stroke="computedBallCBorderColor"
-        :fill="ballCColor"
-        stroke-width="1"
-      >
+      <circle :r="ballCRadius * 5" :stroke="computedBorderColorC" :fill="colorC" stroke-width="1">
         <animateMotion
           begin="0s; b423ec35d98d700b98e475f7694dcb9110.end"
           id="5bc7d5e2eeb068c63550eb4910756b1710"
@@ -190,23 +175,23 @@ export default {
       type: [Number, Array],
       default: 1
     },
-    ballAColor: {
+    colorA: {
       type: String,
       default: "#000000"
     },
-    ballABorderColor: {
+    borderColorA: {
       type: String,
-      default: this.ballAColor
+      default: this.colorA
     },
-    ballBColor: {
+    colorB: {
       type: String,
       default: "#000000"
     },
-    ballBBorderColor: {
+    borderColorB: {
       type: String,
-      default: this.ballBColor
+      default: this.colorB
     },
-    ballCColor: {
+    colorC: {
       type: String,
       default() {
         if (this.border) {
@@ -216,13 +201,13 @@ export default {
         }
       }
     },
-    ballCBorderColor: {
+    borderColorC: {
       type: String,
       default() {
         if (this.border) {
           return "#000000";
         } else {
-          return this.ballCColor;
+          return this.colorC;
         }
       }
     }
@@ -269,25 +254,25 @@ export default {
         return 1;
       }
     },
-    computedBallABorderColor() {
+    computedBorderColorA() {
       if (this.border) {
-        return this.ballABorderColor;
+        return this.borderColorA;
       } else {
-        return this.ballAColor;
+        return this.colorA;
       }
     },
-    computedBallBBorderColor() {
+    computedBorderColorB() {
       if (this.border) {
-        return this.ballBBorderColor;
+        return this.borderColorB;
       } else {
-        return this.ballBColor;
+        return this.colorB;
       }
     },
-    computedBallCBorderColor() {
+    computedBorderColorC() {
       if (this.border) {
-        return this.ballCBorderColor;
+        return this.borderColorC;
       } else {
-        return this.ballCColor;
+        return this.colorC;
       }
     }
   },

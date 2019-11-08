@@ -1,4 +1,6 @@
 import WaitA from './WaitA.vue'
+import WaitB from './WaitB.vue'
+import WaitC from './WaitC.vue'
 
 let plugin = {}
 plugin.install = function (Vue, options) {
@@ -11,5 +13,7 @@ plugin.install = function (Vue, options) {
     }
   }
   Vue.component(WaitA.name, WaitA)
+  Vue.component(WaitB.name, WaitB)
+  Vue.component(WaitC.name, WaitC)
 }
 export default plugin
